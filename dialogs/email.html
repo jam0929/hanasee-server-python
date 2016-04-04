@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><title>Jumping Nuts Inc.</title></head>
+<body style="margin:0; padding:0; font-size: 12px;
+        background: url('http://media.tumblr.com/05551e707b4b2145352febbdc7dee99f/tumblr_inline_mr6k63GXwD1qz4rgp.jpg');">
+    <div id="container" style="width: 80%;
+        margin-left: 10%;
+        margin-top: 24px;
+        border: 1px solid #c62f2f;
+        border-radius: 12px;">
+      <div id="header" style="background-color: #c62f2f;
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
+        color: white;
+        vertical-align: middle;
+        padding: 8px 12px;
+        font-size: 30px;">
+        {{ username }}
+        <a href="http://hanasee.com">
+          <img src="http://hanasee.com/images/logo_circle_56x56_white.png" class="pull-right" style="float:right;width:32px;height:32px;"></a>
+      </div>
+      <div id="body" style="text-align:center;
+        padding: 12px;
+        background-color: white;">
+ 
+        <h2>{{ message }}</h2>
+ 
+        <a href="http://hanasee.com/dashboard/{{ uid }}" style="color: #d1d1d1;">
+        <img class="profile" src="{{ picture }}" style="border-radius: 50%;
+        width: 96px; height:96px;"></a>
+ 
+        <h3>
+          <a href="{{ url }}" style="color: #d1d1d1;">
+            {{ url }}
+          </a>
+        </h3>
+ 
+      </div>
+      <div id="footer" style="background-color: #c62f2f;
+        padding: 12px;
+        border-bottom-left-radius: 11px;
+        border-bottom-right-radius: 11px;
+        color: white;
+        text-align: center;">
+        <h2>
+          Download our mobile app!	
+          <a href="https://play.google.com/store/apps/details?id=com.jumpingnuts.hanasee" style="color:white;">
+          <img src="http://streambels.com/wp-content/uploads/2013/11/google_play-1.png" width="120" style="vertical-align: middle;"></a>
+        </h2>
+ 
+        <a href="http://hanasee.com" style="color:white;">
+          <img class="logo" src="http://hanasee.com/images/logo_circle_256x256_filled_white_transparent.png" style="vertical-align:middle;width:120px;height:120px;opacity:.8;"></a>
+        <br><br>
+        This message was sent to {{ email }}<br>
+        If you don't want to receive these emails from Hanasee in the future,<br>
+        you can go to the <a href="http://hanasee.com/settings" style="color:white;">account settings</a> page to manage your email preferences.
+      </div>
+    </div>
+</body>
+</html>

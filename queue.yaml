@@ -1,0 +1,7 @@
+# Set the total storage limit for all queues to 120MB
+queue:
+- name: default
+  rate: 1/s
+  retry_parameters:
+    min_backoff_seconds: 40
+    task_retry_limit: 10

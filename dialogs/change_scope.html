@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    <p><b>{{ client_name }}</b> 앱에서 새로운 권한을 요청합니다.</p>
+    {% if old_scope %}
+    <p>기존 권한 : {{old_scope}}</p>
+    {% endif %}
+    <p>요청 사항 : {{ scope }}</p>
+    <p>승인하시겠습니까?</p>
+    <form id = "deligate" action="/oauth2/decision" method="post">
+      <input name="transaction_id" type="hidden" value="{{ transactionID }}">
+      <input type="hidden" name="returnTo" value="{{ returnTo }}">
+      <input type="hidden" name="dialog" value="change_scope.html">
+      <div>
+      <input type="submit" value="Allow" id="allow">
+      <!--input type="submit" value="Deny" name="cancel" id="deny" onclick="documnet.getElementById('deligate').action='/dialog/authorize/deny'"-->
+      </div>
+    </form>
+
+    <script>
+      window.onload=function() {
+        document.getElementById('deligate').submit();
+      }
+    </script>
+  </body>
+</html>
+{% endautoescape %}

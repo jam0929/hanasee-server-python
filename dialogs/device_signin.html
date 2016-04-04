@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    <p><b>계정 정보를 확인하고 있습니다. 잠시만 기다려주세요.</p>
+    <form id = "device_signin" action="/signin" method="post">
+      <input type="hidden" name="returnTo" value="{{ returnTo }}">
+      <input type="hidden" name="appName" value="{{ appName }}">
+      <input type="hidden" name="deviceId" value="{{ deviceId }}">
+      <input type="hidden" name="clientId" value="{{ clientId }}">
+      <input type="hidden" name="state" value="{{ state }}">
+      <input type="hidden" name="dialog" value="device_signin.html">
+    </form>
+
+    <script>
+      window.onload=function() {
+        document.getElementById('device_signin').submit();
+      }
+    </script>
+  </body>
+</html>
+{% endautoescape %}

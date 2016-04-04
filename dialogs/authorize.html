@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    <p><b>{{ client_name }}</b> 앱에서 새로운 권한을 요청합니다.</p>
+    <p>요청 사항 : {{ scope }}
+    <p>승인하시겠습니까?</p>
+    <form id = "deligate" action="/oauth2/decision" method="post">
+      <input type="hidden" name="returnTo" value="{{ returnTo }}">
+      <input type="hidden" name="state" value="{{ state }}">
+      <input type="hidden" name="dialog" value="authorize.html">
+      <div>
+      <input type="submit" value="Allow" id="allow">
+      <!--input type="submit" value="Deny" name="cancel" id="deny" onclick="documnet.getElementById('deligate').action='/dialog/authorize/deny'"-->
+      </div>
+    </form>
+
+    <script>
+      window.onload=function() {
+        document.getElementById('deligate').submit();
+      }
+    </script>
+  </body>
+</html>
+{% endautoescape %}

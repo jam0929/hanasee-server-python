@@ -1,0 +1,1 @@
+python -m pip install --target=lib/vendor -r requirements.txt

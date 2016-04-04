@@ -1,0 +1,114 @@
+{% include '_header.html' %}
+<fieldset>
+  <legend>Log-in</legend>
+
+  {% if message %}
+  <div data-alert class="alert-box alert small-12">
+    {{message}}
+    <a href="#" class="close">&times;</a>
+  </div>
+  {% endif %}
+
+  <div class="small-12 medium-8 columns">
+    <form id="login-form" action="/signin" method="post">
+      <div class="row">
+        <div class="small-12 large-6 columns">
+          <label><!--  class="error" if error -->
+            Email
+            <input type="email" name="email" class="large-6" required autofocus>
+          </label>
+          <!-- <small class="error">Invalid entry</small>-->
+        </div>
+
+        <div class="small-12 large-6 columns">
+          <label><!--  class="error" if error -->
+            Password
+            <input type="password" name="password" class="large-6" required>
+          </label>
+          <!-- <small class="error">Invalid entry</small>-->
+        </div>
+
+        <div class="small-12 columns">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+
+          <input type="hidden" name="returnTo" value="{{ returnTo }}">
+          <input type="hidden" name="appName" value="{{ appName }}">
+          <input type="hidden" name="state" value="{{ state }}">
+          <input type="hidden" name="dialog" value="signin.html">
+
+          <button class="button expand orange" type="submit">Sign in</button>
+          <a href="/dialog/find_password?returnTo={{ returnTo }}"><div class="pull-right">Find password</div></a>
+        </div>
+      </div>
+    </form>
+
+    <h4 class="text-center">or</h4>
+
+    <div class="row">
+      <div class="small-3 columns">
+        <a href="/signin/fb" class="button expand facebook">
+          <i class="fa fa-facebook fa-2x"></i>
+          <span class="hide-for-small-only hide-for-medium-only">Facebook</span>
+        </a>
+      </div>
+
+      <div class="small-3 columns">
+        <a href="/signin/tw" class="button expand twitter">
+          <i class="fa fa-twitter fa-2x"></i>
+          <span class="hide-for-small-only hide-for-medium-only">Twitter</span>
+        </a>
+      </div>
+
+      <div class="small-3 columns">
+        <a href="/signin/google" class="button expand google-plus">
+          <i class="fa fa-google-plus fa-2x"></i>
+          <span class="hide-for-small-only hide-for-medium-only">Google+</span>
+        </a>
+      </div>
+
+      <div class="small-3 columns">
+        <a href="/signin/kakao" class="button expand kakao">
+          <i class="fa fa-comment fa-2x"></i>
+          <span class="hide-for-small-only hide-for-medium-only">KAKAO</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="small-12 medium-4 columns">
+      <form id="regist-form" action="/regist" method="post">
+      <fieldset>
+        <legend>Quick registration</legend>
+        <div class="small-12 columns">
+          <label><!--  class="error" if error -->
+            <!-- Email -->
+            <input type="email" name="email" class="small" placeholder="Email" required>
+          </label>
+          <!-- <small class="error">Invalid entry</small>-->
+        </div>
+        <div class="small-12 columns">
+          <label><!--  class="error" if error -->
+            <!-- Nick name -->
+            <input type="text" name="nickname" class="small" placeholder="Nick name" minlength="3" maxlength="20" required>
+          </label>
+          <!-- <small class="error">Invalid entry</small>-->
+        </div>
+        <div class="small-12 columns">
+          <label><!--  class="error" if error -->
+            <!-- Password -->
+            <input type="password" name="password" class="small" placeholder="password" minlength="4" maxlength="20" required>
+          </label>
+          <!-- <small class="error">Invalid entry</small>-->
+        </div>
+        <div class="small-12 columns">
+          <button type="submit" class="button expand blue small" data-bypass="true">Confirm</button>
+        </div>
+    </fieldset>
+    </form>
+  </div>
+</fieldset>
+
+{% include '_footer.html' %}

@@ -1,0 +1,4 @@
+cron:
+- description: summary hanasy viewCount
+  url: /hanasee/hanasees/summary
+  schedule: every 1 mins

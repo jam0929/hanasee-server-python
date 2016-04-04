@@ -1,0 +1,34 @@
+application: jmpnuts
+version: 0-1-5
+#version: 9-9-9
+runtime: python27
+api_version: 1
+threadsafe: true
+instance_class: F4
+automatic_scaling:
+  #max_pending_latency: 14.8s
+  min_idle_instances: 1
+  max_idle_instances: 5  # default value
+  min_pending_latency: automatic  # default value
+  max_pending_latency: 5s
+  #max_concurrent_requests: 80
+
+handlers:
+- url: /(css|img|js)/(.*)
+  static_files: dialogs/\1/\2
+  upload: dialogs/(css|img|js)/(.*)
+
+- url: .*
+  script: main.app
+
+# [START libraries]
+libraries:
+- name: webapp2
+  version: "latest"
+
+- name: MySQLdb
+  version: "latest"
+
+- name: jinja2
+  version: latest
+# [END libraries]

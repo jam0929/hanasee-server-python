@@ -1,0 +1,67 @@
+@media only screen {
+  .row .columns, .row .column {
+    padding-left: .6em; /* change the values to anything that you want */
+    padding-right: .6em;
+  }
+  fieldset {
+    padding: .5em;
+  }
+}
+
+button.facebook, .button.facebook, a.facebook {
+  background-color: #3d5998;
+}
+button.facebook:hover, button.facebook:focus, .button.facebook:hover, .button.facebook:focus {
+  background-color: #304677;
+}
+button.twitter, .button.twitter, a.twitter {
+  background-color: #2ba8e0;
+}
+button.twitter:hover, button.twitter:focus, .button.twitter:hover, .button.twitter:focus {
+  background-color: #248dbc;
+}
+button.google-plus, .button.google-plus, a.google-plus {
+  background-color: #da4835;
+}
+button.google-plus:hover, button.google-plus:focus, .button.google-plus:hover, .button.google-plus:focus {
+  background-color: #af3a2b;
+}
+button.kakao, .button.kakao, a.kakao {
+  background-color: #f9e81e;
+  color: #3f292d;
+}
+button.kakao:hover, button.kakao:focus, .button.kakao:hover, .button.kakao:focus {
+  background-color: #cfc118;
+  color: #3f292d;
+}
+
+button.orange, .button.orange, a.orange {
+  background-color: #f75524;
+}
+button.orange:hover, button.orange:focus, .button.orange:hover, .button.orange:focus {
+  background-color: #bd4d1f;
+}
+button.green, .button.green, a.green {
+  background-color: #bbcb2a;
+}
+button.green:hover, button.green:focus, .button.green:hover, .button.green:focus {
+  background-color: #9daa27;
+}
+button.yellow, .button.yellow, a.yellow {
+  background-color: #e9b406;
+}
+button.yellow:hover, button.yellow:focus, .button.yellow:hover, .button.yellow:focus {
+  background-color: #c39406;
+}
+button.blue, .button.blue, a.blue {
+  background-color: #009faf;
+}
+button.blue:hover, button.blue:focus, .button.blue:hover, .button.blue:focus {
+  background-color: #0b8296;
+}
+button.purple, .button.purple, a.purple {
+  background-color: #93669d;
+}
+button.purple:hover, button.purple:focus, .button.purple:hover, .button.purple:focus {
+  background-color: #7a5287;
+}

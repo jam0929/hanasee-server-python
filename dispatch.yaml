@@ -1,0 +1,28 @@
+dispatch:
+  # Default module serves the typical web resources and all static resources.
+  #- url: "*/favicon.ico"
+  #  module: default
+
+  # Default module serves simple hostname request.
+  #- url: "api.jumpingnuts.com/"
+  #  module: default
+
+  # Send all mobile traffic to the mobile frontend.
+  #- url: "ssul.it/sitemap-generator"
+  #  module: ssul-it-sitemap-generator
+  - url: "ssul.it/"
+    module: hanasy-client-web
+  - url: "ssul.it/*"
+    module: hanasy-client-web
+  - url: "hanasy.com/"
+    module: hanasy-client-web
+  - url: "hanasy.com/*"
+    module: hanasy-client-web
+  - url: "hanasee.com/"
+    module: hanasee-client-web
+  - url: "hanasee.com/*"
+    module: hanasee-client-web
+  - url: "www.hanasee.com/"
+    module: hanasee-client-web
+  - url: "www.hanasee.com/*"
+    module: hanasee-client-web
